@@ -1,0 +1,26 @@
+# /etc/conf.d/vuld: config file for /etc/init.d/vuld
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/vul/vul.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/vuld"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/vuld.pid"
+
+# Where to write vuld data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/vuld"
+
+# User and group to own vuld process
+#BITCOIND_USER="vul"
+#BITCOIND_GROUP="vul"
+
+# Path to vuld executable
+#BITCOIND_BIN="/usr/bin/vuld"
+
+# Nice value to run vuld under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

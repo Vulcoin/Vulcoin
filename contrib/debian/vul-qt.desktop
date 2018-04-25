@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Vul
+Comment=Vul P2P Cryptocurrency
+Comment[fr]=Vul, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Vul, eşten eşe kriptografik sanal para birimi
+Exec=vul-qt %u
+Terminal=false
+Type=Application
+Icon=vul128
+MimeType=x-scheme-handler/vul;
+Categories=Office;Finance;

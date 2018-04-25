@@ -1,0 +1,26 @@
+[Unit]
+Description=VUL's distributed currency daemon
+After=network.target
+
+[Service]
+User=vul
+Group=vul
+
+Type=forking
+PIDFile=/var/lib/vuld/vuld.pid
+
+ExecStart=/usr/bin/vuld -daemon -pid=/var/lib/vuld/vuld.pid \
+          -conf=/etc/vul/vul.conf -datadir=/var/lib/vuld
+
+ExecStop=-/usr/bin/vul-cli -conf=/etc/vul/vul.conf \
+         -datadir=/var/lib/vuld stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
